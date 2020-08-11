@@ -13,7 +13,6 @@ import com.ugurhalil.exceptions.ConnectionManagerException;
 import com.ugurhalil.models.DatabaseConnectionModel;
 import com.ugurhalil.utils.ArgumentUtil;
 
-import java.io.PrintStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,7 +24,7 @@ public class HybrisLicenseUpdater {
     public static void main(String[] args) {
         if (args.length != 0) {
             /*
-            required -hp arguments, the argument is a hybris 
+            required arguments, the argument is a hybris -hp
             choose database type (mysql, hsqldb, sql, postgresql, mongo) -t
             enter an database url (jdbc:mysql//localhost:3306/) -l
             username (root) -u
