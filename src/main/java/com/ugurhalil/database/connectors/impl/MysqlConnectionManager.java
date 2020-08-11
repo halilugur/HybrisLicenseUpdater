@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ugurhalil.database.connectors;
+package com.ugurhalil.database.connectors.impl;
 
-import com.ugurhalil.models.DBLoginModel;
-import java.sql.Connection;
+import com.ugurhalil.database.connectors.ConnectionManagerStrategy;
+import com.ugurhalil.models.DatabaseConnectionModel;
 
 /**
  *
  * @author halilugur
  */
-public class OracleConnectionManager implements ConnectionManagerStrategy {
+public class MysqlConnectionManager implements ConnectionManagerStrategy {
 
     @Override
-    public Connection doConnection(DBLoginModel loginModel) {
+    public void doOperation(DatabaseConnectionModel loginModel) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

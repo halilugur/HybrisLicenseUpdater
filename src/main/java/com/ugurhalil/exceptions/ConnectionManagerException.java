@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ugurhalil.database.connectors;
-
-import com.ugurhalil.models.DatabaseConnectionModel;
+package com.ugurhalil.exceptions;
 
 /**
  *
  * @author halilugur
  */
-public interface ConnectionManagerStrategy {
-    void doOperation(DatabaseConnectionModel loginModel);
+public class ConnectionManagerException extends Exception {
+
+    public ConnectionManagerException() {
+        super("Connection manager not found!");
+    }
 }

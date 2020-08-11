@@ -6,8 +6,7 @@
 package com.ugurhalil.main;
 
 import com.ugurhalil.database.connectors.ConnectionManagerStrategy;
-import com.ugurhalil.models.DBLoginModel;
-import java.sql.Connection;
+import com.ugurhalil.models.DatabaseConnectionModel;
 
 /**
  *
@@ -15,13 +14,13 @@ import java.sql.Connection;
  */
 public class Context {
 
-    private ConnectionManagerStrategy cms;
+    private final ConnectionManagerStrategy cms;
 
     public Context(ConnectionManagerStrategy cms) {
         this.cms = cms;
     }
     
-    public Connection executeStrategy(DBLoginModel loginModel){
-        return cms.doConnection(loginModel);
+    public void executeStrategy(DatabaseConnectionModel loginModel){
+        cms.doOperation(loginModel);
     }
 }
